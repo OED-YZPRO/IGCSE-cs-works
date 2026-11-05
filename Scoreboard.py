@@ -1,0 +1,1 @@
+inputTeams = input('Enter the team names. ').split()

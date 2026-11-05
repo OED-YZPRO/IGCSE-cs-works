@@ -1,5 +1,5 @@
 inputTeams = input('Enter the team names. ').split()
-teamNnR = [['Name: ']]
+teamNnR = [['Name']]
 def count(results):
     scores = []
     for result in results:
@@ -11,8 +11,9 @@ def count(results):
             scores.append(1)
         elif result == 'lost':
             scores.append(2)
+    return scores
 n = 1 
-for item in inputTeams:
+for team in inputTeams:
     rslt = list(input(f'Enter the results for {team} (homeWin, awayWin, draw, lost). ').split())
     teamNnR.append([team])
     for number in count(rslt):
@@ -22,4 +23,5 @@ x = 1
 for i in rslt:
     teamNnR[0].append(f'MatchNo{x}')
     x += 1
-print('The scores for each round\n ', teamNnR, '\nNo. of Matches - ', x)
+
+print('The scores for each round\n ', teamNnR, '\nNo. of Matches - ', len(teamNnR[1]) - 1)

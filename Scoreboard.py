@@ -10,7 +10,7 @@ def count(results):
         elif result == 'draw':
             scores.append(1)
         elif result == 'lost':
-            scores.append(2)
+            scores.append(0)
     return scores
 n = 1 
 for team in inputTeams:
@@ -32,6 +32,5 @@ teamNnR[0].append('total scores')
 # print('The scores for each round\n ', teamNnR, '\nNo. of Matches - ', len(teamNnR[1]) - 2)
 print('The scores for each round\n')
 for rows in teamNnR:
-  print(rows)
+    print(rows)
 print('\nNo. of Matches - ', len(teamNnR[1]) - 2)
-a

@@ -14,7 +14,7 @@ def check_low_team(team_list):
     low_score = [1][-1]
     low_team = ''
     for row in team_list:
-        if type(row[-1]) == int and row[-1] < low_score:
+        if type(row[-1]) == int and row[-1] <= low_score:
             low_score = row[-1]
             low_team = row[0]
     return low_score, low_team
